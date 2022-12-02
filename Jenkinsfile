@@ -5,6 +5,7 @@ agent none
       agent { label 'slaveone'}
       steps {
         sh 'pwd'
+        sh 'ls'
       }
     }
   }
