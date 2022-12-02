@@ -14,7 +14,7 @@ agent none
     stage ('deploy'){
       agent { label 'slavetwo'}
       steps {
-        sh 'sh /opt/tomcat/bin/startup.sh'
+        sh 'sudo sh /opt/tomcat/bin/startup.sh'
         echo "Deployment is successful"
       }
     }
