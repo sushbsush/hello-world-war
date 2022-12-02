@@ -9,6 +9,13 @@ pipeline {
             sh 'scp -r target/hello-world-war-${BUILD_NUMBER}.war root@172.31.7.117:/opt/tomcat/webapps'
        }
       }
-      
+      stage ('deploy') {
+      agent {label 'slavetwo'}
+      steps {
+        sh 'sudo sh /opt/tomcat/bin/startup.sh'
+        sh 'curl -usushmithasuhu2@gmail.com:cmVmdGtuOjAxOjAwMDAwMDAwMDA6dWxuQ2NoVWRhbm9sdWVvT1lsMWFZRmNmZXpl -T hello-world-war-${BUILD_NUMBER}.war \https://sushmitha.jfrog.io/artifactory/libs-release-local/com/efsavage/hello-world-war/${BUILD_NUMBER}/hello-world-war-1.0.0.war'
+      }
+      }
+      }
     }
 }
