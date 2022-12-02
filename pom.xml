@@ -25,5 +25,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0h0dqjxqhi86-artifactory-primary-0-releases</name>
+        <url>https://sushmitha.jfrog.io/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 
 </project>
